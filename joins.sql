@@ -72,7 +72,7 @@ on e.Depid=p.Deptid;
 -- Retrieve the list of employees whose department ID is greater than the department ID of 'HR' department.
 select e.Empname, d.Depid, d.Depname, e.Depid
 from emps e
-inner join Dep dempEmpidEmpname
+inner join Dep d
 on e.Depid>d.Depid
 where d.Depid in (select Depid from Dep where Depname = "HR");
 
